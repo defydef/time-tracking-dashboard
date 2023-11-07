@@ -9,8 +9,8 @@ import SelfCareIcon from "./ui/svg/SelfCareIcon";
 
 function App() {
   return (
-    <div className="flex flex-col gap-y-6 py-20 overflow-x-scroll">
-      <MainCard />
+    <div className="flex flex-col gap-y-6 py-20 sm:flex-row gap-x-3">
+      {/* <MainCard /> */}
       <ActivityCard
         icon={<WorkIcon />}
         title="Work"
