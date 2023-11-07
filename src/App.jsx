@@ -9,28 +9,40 @@ import SelfCareIcon from "./ui/svg/SelfCareIcon";
 
 function App() {
   return (
-    <div className="flex flex-col gap-6 py-20">
+    <div className="flex flex-col gap-y-6 py-20 overflow-x-scroll">
       <MainCard />
-      <ActivityCard icon={<WorkIcon />} title="Work" bgVariant="work" />
-      <ActivityCard icon={<PlayIcon />} title="Play" bgVariant="play" />
-      <ActivityCard icon={<StudyIcon />} title="Study" bgVariant="study" />
+      <ActivityCard
+        icon={<WorkIcon />}
+        title="Work"
+        bgVariant="bg-[var(--work)]"
+      />
+      <ActivityCard
+        icon={<PlayIcon />}
+        title="Play"
+        bgVariant="bg-[var(--play)]"
+      />
+      <ActivityCard
+        icon={<StudyIcon />}
+        title="Study"
+        bgVariant="bg-[var(--study)]"
+      />
       <ActivityCard
         icon={<ExerciseIcon />}
         title="Exercise"
-        bgVariant="exercise"
-        top="1rem"
+        bgVariant="bg-[var(--exercise)]"
+        bottom="bottom-[-1rem]"
       />
       <ActivityCard
         icon={<SocialIcon />}
         title="Social"
-        bgVariant="social"
-        top="3rem"
+        bgVariant="bg-[var(--social)]"
+        bottom="bottom-[-3rem]"
       />
       <ActivityCard
         icon={<SelfCareIcon />}
         title="Self Care"
-        bgVariant="selfcare"
-        top="1rem"
+        bgVariant="bg-[var(--selfcare)]"
+        bottom="bottom-[-1rem]"
       />
     </div>
   );

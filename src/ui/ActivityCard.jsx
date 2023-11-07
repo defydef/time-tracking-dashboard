@@ -1,9 +1,9 @@
-function ActivityCard({ icon, title, bgVariant, top = "2.1rem" }) {
+function ActivityCard({ icon, title, bgVariant, bottom = "bottom-[-2.2rem]" }) {
   return (
     <div
-      className={`bg-[var(--${bgVariant})] w-[20.4375rem] h-[10rem] rounded-[0.9375rem] flex flex-col overflow-hidden justify-end`}
+      className={`${bgVariant} w-[20.4375rem] h-[10rem] rounded-[0.9375rem] flex flex-col overflow-hidden justify-end`}
     >
-      <div className={`flex justify-end relative z-[1] top-[${top}] mr-2`}>
+      <div className={`flex justify-end relative z-[1] mr-2 ${bottom}`}>
         {icon}
       </div>
       <section className="bg-[var(--card-bg)] h-[7.625rem] rounded-[0.9375rem_0.9375rem_0_0] px-5 py-6 z-[2] relative">
