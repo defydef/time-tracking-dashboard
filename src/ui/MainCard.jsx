@@ -1,6 +1,6 @@
 function MainCard() {
   return (
-    <div className="bg-[var(--card-bg)] w-[20.4375rem] rounded-[0.9375rem] pb-3 flex flex-col gap-3">
+    <div className="bg-[var(--card-bg)] w-[20.4375rem] sm:w-[15.9375rem] sm:h-max rounded-[0.9375rem] pb-3 flex flex-col gap-3 sm:row-span-full">
       <section className="bg-[var(--primary)] rounded-[0.9375rem] px-5 py-6">
         <div className="flex items-center justify-start gap-5">
           <div className="rounded-full w-[4.5rem] h-[4.5rem] bg-white flex justify-center items-center">
