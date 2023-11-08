@@ -31,18 +31,21 @@ function App() {
         title="Exercise"
         bgVariant="bg-[var(--exercise)]"
         bottom="bottom-[-1rem]"
+        bottomSm="bottom-[1rem]"
       />
       <ActivityCard
         icon={<SocialIcon />}
         title="Social"
         bgVariant="bg-[var(--social)]"
         bottom="bottom-[-3rem]"
+        topSm="top-2"
       />
       <ActivityCard
         icon={<SelfCareIcon />}
         title="Self Care"
         bgVariant="bg-[var(--selfcare)]"
         bottom="bottom-[-1rem]"
+        bottomSm="bottom-[1rem]"
       />
     </div>
   );
