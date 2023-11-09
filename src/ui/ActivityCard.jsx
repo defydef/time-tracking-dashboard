@@ -4,7 +4,7 @@ function ActivityCard({
   bgVariant,
   bottom = "bottom-[-2.2rem]",
   bottomSm = "bottom-0",
-  topSm,
+  topSm = "top-0",
   current,
   previous,
 }) {
