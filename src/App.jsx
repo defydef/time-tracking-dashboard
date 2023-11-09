@@ -14,35 +14,35 @@ function App() {
     {
       icon: <WorkIcon />,
       bgVariant: "bg-[var(--work)]",
-      bottom: "-bottom-9",
+      // bottom: "-bottom-9",
     },
     {
       icon: <PlayIcon />,
       bgVariant: "bg-[var(--play)]",
-      bottom: "-bottom-9",
+      // bottom: "-bottom-9",
       topSm: "-top-1",
     },
     {
       icon: <StudyIcon />,
       bgVariant: "bg-[var(--study)]",
-      bottom: "-bottom-9",
+      // bottom: "-bottom-9",
     },
     {
       icon: <ExerciseIcon />,
       bgVariant: "bg-[var(--exercise)]",
-      bottom: "-bottom-4",
+      // bottom: "-bottom-4",
       topSm: "-top-5",
     },
     {
       icon: <SocialIcon />,
       bgVariant: "bg-[var(--social)]",
-      bottom: "-bottom-10",
+      // bottom: "-bottom-10",
       topSm: "top-2",
     },
     {
       icon: <SelfCareIcon />,
       bgVariant: "bg-[var(--selfcare)]",
-      bottom: "-bottom-4",
+      // bottom: "-bottom-4",
       topSm: "-top-5",
     },
   ];
