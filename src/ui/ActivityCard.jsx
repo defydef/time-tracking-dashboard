@@ -3,8 +3,8 @@ function ActivityCard({
   title,
   bgVariant,
   bottom = "bottom-0",
-  bottomSm = "bottom-0",
-  topSm = "top-0",
+  bottomSm = "sm:bottom-0",
+  topSm = "sm:top-0",
   current,
   previous,
 }) {
@@ -13,9 +13,7 @@ function ActivityCard({
       className={`${bgVariant} w-[20.4375rem] sm:w-[15.9375rem] h-[10rem] sm:h-[15.2475rem] rounded-[0.9375rem] flex flex-col overflow-hidden justify-end`}
     >
       <div
-        className={`flex justify-end relative z-[1] mr-2 -bottom-9
-        sm:${bottomSm} sm:${topSm}
-        `}
+        className={`flex justify-end relative z-[1] mr-2 ${bottom} ${bottomSm} ${topSm}`}
       >
         {icon}
       </div>

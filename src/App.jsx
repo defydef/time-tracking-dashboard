@@ -20,7 +20,7 @@ function App() {
       icon: <PlayIcon />,
       bgVariant: "bg-[var(--play)]",
       // bottom: "-bottom-9",
-      topSm: "-top-1",
+      topSm: "sm:-top-1",
     },
     {
       icon: <StudyIcon />,
@@ -31,19 +31,19 @@ function App() {
       icon: <ExerciseIcon />,
       bgVariant: "bg-[var(--exercise)]",
       // bottom: "-bottom-4",
-      topSm: "-top-5",
+      topSm: "sm:-top-5",
     },
     {
       icon: <SocialIcon />,
       bgVariant: "bg-[var(--social)]",
       // bottom: "-bottom-10",
-      topSm: "top-2",
+      topSm: "sm:top-2",
     },
     {
       icon: <SelfCareIcon />,
       bgVariant: "bg-[var(--selfcare)]",
       // bottom: "-bottom-4",
-      topSm: "-top-5",
+      topSm: "sm:-top-5",
     },
   ];
   const activities = data.map((d, i) => {
