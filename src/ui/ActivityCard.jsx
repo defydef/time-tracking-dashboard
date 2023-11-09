@@ -2,7 +2,7 @@ function ActivityCard({
   icon,
   title,
   bgVariant,
-  bottom = "bottom-[-2.2rem]",
+  bottom = "bottom-0",
   bottomSm = "bottom-0",
   topSm = "top-0",
   current,

@@ -11,9 +11,21 @@ import { useState } from "react";
 
 function App() {
   const additionalProps = [
-    { icon: <WorkIcon />, bgVariant: "bg-[var(--work)]" },
-    { icon: <PlayIcon />, bgVariant: "bg-[var(--play)]" },
-    { icon: <StudyIcon />, bgVariant: "bg-[var(--study)]" },
+    {
+      icon: <WorkIcon />,
+      bgVariant: "bg-[var(--work)]",
+      bottom: "bottom-[-2rem]",
+    },
+    {
+      icon: <PlayIcon />,
+      bgVariant: "bg-[var(--play)]",
+      bottom: "bottom-[-2rem]",
+    },
+    {
+      icon: <StudyIcon />,
+      bgVariant: "bg-[var(--study)]",
+      bottom: "bottom-[-2rem]",
+    },
     {
       icon: <ExerciseIcon />,
       bgVariant: "bg-[var(--exercise)]",
