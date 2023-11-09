@@ -13,7 +13,7 @@ function ActivityCard({
       className={`${bgVariant} w-[20.4375rem] sm:w-[15.9375rem] h-[10rem] sm:h-[15.2475rem] rounded-[0.9375rem] flex flex-col overflow-hidden justify-end`}
     >
       <div
-        className={`flex justify-end relative z-[1] mr-2 ${bottom}
+        className={`flex justify-end relative z-[1] mr-2 -bottom-9
         sm:${bottomSm} sm:${topSm}
         `}
       >
