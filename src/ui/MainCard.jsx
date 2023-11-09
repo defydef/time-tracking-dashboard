@@ -1,5 +1,10 @@
+import { useState } from "react";
+import TimePeriod from "./TimePeriod";
+
 function MainCard() {
   const textHover = "hover:text-white hover:cursor-pointer";
+  const [period, setPeriod] = useState("");
+
   return (
     <div className="bg-[var(--card-bg)] w-[20.4375rem] sm:w-[15.9375rem] rounded-[0.9375rem] pb-3 flex flex-col gap-3 sm:row-span-full">
       <section className="bg-[var(--primary)] rounded-[0.9375rem] px-5 py-6 sm:p-7 sm:h-[22.125rem]">
@@ -21,9 +26,21 @@ function MainCard() {
         </div>
       </section>
       <section className="flex sm:flex-col justify-around items-end sm:items-start sm:gap-3 sm:py-3 sm:px-7 text-[var(--secondary-heading)] ">
-        <p className={textHover}>Daily</p>
-        <p className={textHover}>Weekly</p>
-        <p className={textHover}>Monthly</p>
+        <TimePeriod
+          onSelect={setPeriod}
+          label="Daily"
+          selectedPeriod={period}
+        />
+        <TimePeriod
+          label="Weekly"
+          onSelect={setPeriod}
+          selectedPeriod={period}
+        />
+        <TimePeriod
+          label="Monthly"
+          onSelect={setPeriod}
+          selectedPeriod={period}
+        />
       </section>
     </div>
   );
