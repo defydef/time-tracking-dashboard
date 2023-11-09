@@ -9,7 +9,33 @@ import SelfCareIcon from "./ui/svg/SelfCareIcon";
 import data from "./data/data.json";
 
 function App() {
-  const activities = [...data];
+  const additionalProps = [
+    { icon: <WorkIcon />, bgVariant: "bg-[var(--work)]" },
+    { icon: <PlayIcon />, bgVariant: "bg-[var(--play)]" },
+    { icon: <StudyIcon />, bgVariant: "bg-[var(--study)]" },
+    {
+      icon: <ExerciseIcon />,
+      bgVariant: "bg-[var(--exercise)]",
+      bottom: "bottom-[-1rem]",
+      topSm: "-top-5",
+    },
+    {
+      icon: <SocialIcon />,
+      bgVariant: "bg-[var(--social)]",
+      bottom: "bottom-[-3rem]",
+      topSm: "top-2",
+    },
+    {
+      icon: <SelfCareIcon />,
+      bgVariant: "bg-[var(--selfcare)]",
+      bottom: "bottom-[-1rem]",
+      topSm: "-top-5",
+    },
+  ];
+  const activities = data.map((d, i) => {
+    const { bgVariant, icon, bottom, bottomSm, topSm } = additionalProps[i];
+    return { ...d, bgVariant, icon, bottom, bottomSm, topSm };
+  });
   return (
     <div className="flex flex-col gap-y-6 py-20 sm:grid sm:grid-rows-2 sm:grid-cols-4 sm:gap-7 overflow-hidden">
       <MainCard />
@@ -17,45 +43,13 @@ function App() {
         <ActivityCard
           key={activity.title}
           title={activity.title}
-          bgVariant="bg-[var(--work)]"
+          icon={activity.icon}
+          bgVariant={activity.bgVariant}
+          bottom={activity.bottom}
+          bottomSm={activity.bottomSm}
+          topSm={activity.topSm}
         />
       ))}
-      {/* <ActivityCard
-        icon={<WorkIcon />}
-        title="Work"
-        bgVariant="bg-[var(--work)]"
-      />
-      <ActivityCard
-        icon={<PlayIcon />}
-        title="Play"
-        bgVariant="bg-[var(--play)]"
-      />
-      <ActivityCard
-        icon={<StudyIcon />}
-        title="Study"
-        bgVariant="bg-[var(--study)]"
-      />
-      <ActivityCard
-        icon={<ExerciseIcon />}
-        title="Exercise"
-        bgVariant="bg-[var(--exercise)]"
-        bottom="bottom-[-1rem]"
-        bottomSm="bottom-[1rem]"
-      />
-      <ActivityCard
-        icon={<SocialIcon />}
-        title="Social"
-        bgVariant="bg-[var(--social)]"
-        bottom="bottom-[-3rem]"
-        topSm="top-2"
-      />
-      <ActivityCard
-        icon={<SelfCareIcon />}
-        title="Self Care"
-        bgVariant="bg-[var(--selfcare)]"
-        bottom="bottom-[-1rem]"
-        bottomSm="bottom-[1rem]"
-      /> */}
     </div>
   );
 }
