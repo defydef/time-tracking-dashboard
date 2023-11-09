@@ -7,6 +7,7 @@ import ExerciseIcon from "./ui/svg/ExerciseIcon";
 import SocialIcon from "./ui/svg/SocialIcon";
 import SelfCareIcon from "./ui/svg/SelfCareIcon";
 import data from "./data/data.json";
+import { useState } from "react";
 
 function App() {
   const additionalProps = [
@@ -36,9 +37,10 @@ function App() {
     const { bgVariant, icon, bottom, bottomSm, topSm } = additionalProps[i];
     return { ...d, bgVariant, icon, bottom, bottomSm, topSm };
   });
+  const [period, setPeriod] = useState("Weekly");
   return (
     <div className="flex flex-col gap-y-6 py-20 sm:grid sm:grid-rows-2 sm:grid-cols-4 sm:gap-7 overflow-hidden">
-      <MainCard />
+      <MainCard period={period} setPeriod={setPeriod} />
       {activities.map((activity) => (
         <ActivityCard
           key={activity.title}
@@ -48,6 +50,8 @@ function App() {
           bottom={activity.bottom}
           bottomSm={activity.bottomSm}
           topSm={activity.topSm}
+          current={activity.timeframes[period.toLowerCase()].current}
+          previous={activity.timeframes[period.toLowerCase()].previous}
         />
       ))}
     </div>

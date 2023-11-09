@@ -5,6 +5,8 @@ function ActivityCard({
   bottom = "bottom-[-2.2rem]",
   bottomSm = "bottom-0",
   topSm,
+  current,
+  previous,
 }) {
   return (
     <div
@@ -30,9 +32,11 @@ function ActivityCard({
             </svg>
           </section>
           <section className="flex justify-between items-center sm:items-start sm:flex-col">
-            <h1 className="text-[2rem] sm:text-[3.5rem] font-light">32hrs</h1>
+            <h1 className="text-[2rem] sm:text-[3.5rem] font-light">
+              {current}hrs
+            </h1>
             <p className="text-[var(--secondary-text)] text-[0.9375rem] sm:mt-[-0.2rem]">
-              Last Week - 36hrs
+              Last Week - {previous}hrs
             </p>
           </section>
         </div>
