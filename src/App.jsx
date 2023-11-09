@@ -6,12 +6,21 @@ import StudyIcon from "./ui/svg/StudyIcon";
 import ExerciseIcon from "./ui/svg/ExerciseIcon";
 import SocialIcon from "./ui/svg/SocialIcon";
 import SelfCareIcon from "./ui/svg/SelfCareIcon";
+import data from "./data/data.json";
 
 function App() {
+  const activities = [...data];
   return (
     <div className="flex flex-col gap-y-6 py-20 sm:grid sm:grid-rows-2 sm:grid-cols-4 sm:gap-7 overflow-hidden">
       <MainCard />
-      <ActivityCard
+      {activities.map((activity) => (
+        <ActivityCard
+          key={activity.title}
+          title={activity.title}
+          bgVariant="bg-[var(--work)]"
+        />
+      ))}
+      {/* <ActivityCard
         icon={<WorkIcon />}
         title="Work"
         bgVariant="bg-[var(--work)]"
@@ -46,7 +55,7 @@ function App() {
         bgVariant="bg-[var(--selfcare)]"
         bottom="bottom-[-1rem]"
         bottomSm="bottom-[1rem]"
-      />
+      /> */}
     </div>
   );
 }
