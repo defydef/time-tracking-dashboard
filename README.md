@@ -49,4 +49,4 @@ Mobile display
 ## Author
 
 - Website - [defydef](https://github.com/defydef)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/defydef)
+- Frontend Mentor - [@defydef](https://www.frontendmentor.io/profile/defydef)
