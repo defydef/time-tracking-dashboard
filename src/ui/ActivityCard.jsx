@@ -7,6 +7,7 @@ function ActivityCard({
   topSm = "sm:top-0",
   current,
   previous,
+  label,
 }) {
   return (
     <div
@@ -34,7 +35,7 @@ function ActivityCard({
               {current}hrs
             </h1>
             <p className="text-[var(--secondary-text)] text-[0.9375rem] sm:mt-[-0.2rem]">
-              Last Week - {previous}hrs
+              Last {label} - {previous}hrs
             </p>
           </section>
         </div>

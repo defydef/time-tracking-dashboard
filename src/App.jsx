@@ -48,6 +48,8 @@ function App() {
     return { ...d, bgVariant, icon, bottom, bottomSm, topSm };
   });
   const [period, setPeriod] = useState("Weekly");
+  const label =
+    period === "Daily" ? "Day" : period === "Weekly" ? "Week" : "Month";
   return (
     <div className="flex flex-col gap-y-6 py-20 sm:grid sm:grid-rows-2 sm:grid-cols-4 sm:gap-7 overflow-hidden">
       <MainCard period={period} setPeriod={setPeriod} />
@@ -62,6 +64,7 @@ function App() {
           topSm={activity.topSm}
           current={activity.timeframes[period.toLowerCase()].current}
           previous={activity.timeframes[period.toLowerCase()].previous}
+          label={label}
         />
       ))}
     </div>
